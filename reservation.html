@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt bàn trực tuyến - Pizzarita</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .reservation-section {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('https://pizza4ps.com/wp-content/uploads/2023/07/Anh-man-hinh-2023-07-13-luc-10.28.49.png');
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 1rem;
+    }
+
+    .call-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28c76f;
+      color: white;
+      font-size: 20px;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 999;
+    }
+
+    .call-btn:hover {
+      background-color: #20b65c;
+      text-decoration: none;
+    }
+
+    .form-select, .form-control {
+      min-width: 150px;
+    }
+
+    img#lang-toggle {
+      cursor: pointer;
+    }
+	  .logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #2e2e2e;
+}
+
+  </style>
+</head>
+<body>
+  <header class="d-flex justify-content-between align-items-center p-3 border-bottom bg-white">
+    <div class="ms-3 logo-text">PIZZARITA</div>
+    <div class="me-3 d-flex align-items-center gap-3">
+      <img src="https://flagcdn.com/gb.svg" width="24" alt="Toggle Language" id="lang-toggle" />
+      <a href="login.html" class="text-primary text-decoration-none fw-semibold">Login <i class="fas fa-arrow-right-to-bracket"></i></a>
+    </div>
+  </header>
+
+  <section class="reservation-section d-flex align-items-center justify-content-center text-white text-center">
+    <div class="container">
+      <h1 class="fw-bold mb-3" id="title">Đặt bàn trực tuyến</h1>
+      <p class="lead" id="desc">Đặt bàn tại các nhà hàng của chúng tôi tại thành phố <strong>Hà Nội</strong></p>
+
+      <div class="bg-white p-3 rounded shadow-sm d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <select class="form-select w-auto">
+          <option>Tràng Tiền</option>
+        </select>
+        <select class="form-select w-auto">
+          <option selected>1 Người</option>
+          <option>2 Người</option>
+          <option>3 Người</option>
+          <option>4 Người</option>
+          <option>5 Người</option>
+          <option>6 Người</option>
+          <option>7 Người</option>
+        </select>
+        <input type="date" class="form-control w-auto" value="2025-05-20">
+        <select class="form-select w-auto">
+          <option selected>Chọn giờ</option>
+          <option>11:00</option>
+          <option>11:30</option>
+          <option>12:00</option>
+          <option>12:30</option>
+          <option>13:00</option>
+          <option>13:30</option>
+          <option>14:00</option>
+          <option>14:30</option>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+          <option>17:00</option>
+          <option>17:30</option>
+          <option>18:00</option>
+          <option>18:30</option>
+          <option>19:00</option>
+          <option>19:30</option>
+          <option>20:00</option>
+          <option>20:30</option>
+        </select>
+        <button class="btn btn-primary px-4" id="search-btn">Tìm</button>
+      </div>
+
+      <div class="mt-4">
+        <p id="location-label">Chọn địa điểm:</p>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+          <button class="btn btn-outline-light btn-sm">Hà Nội</button>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h2 class="fw-bold" id="findTable">Tìm bàn phù hợp</h2>
+        <p class="fw-semibold" id="or">HOẶC</p>
+        <p class="small" id="note">Đối với các nhu cầu cụ thể, như nhóm lớn (15 khách trở lên)... vui lòng liên hệ Dịch vụ Khách hàng Pizzarita</p>
+        <p class="small" id="phoneVN">Số điện thoại trong nước: <strong>0918259981</strong></p>
+        <p class="small" id="phoneINT">Số điện thoại quốc tế: <strong>0918910JQK</strong></p>
+      </div>
+
+      <footer class="mt-5 small text-white">
+        <p>Email: phat0021068@huce.edu.vn</p>
+      </footer>
+    </div>
+  </section>
+
+  <a href="#" class="call-btn">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <script>
+    let currentLang = 'vi';
+
+    const translations = {
+      "vi": {
+        "title": "Đặt bàn trực tuyến",
+        "description": "Đặt bàn tại các nhà hàng của chúng tôi tại thành phố <strong>Hà Nội</strong>",
+        "findTable": "Tìm bàn phù hợp",
+        "or": "HOẶC",
+        "note": "Đối với các nhu cầu cụ thể, như nhóm lớn (15 khách trở lên)... vui lòng liên hệ Dịch vụ Khách hàng Pizzarita",
+        "phoneVN": "Số điện thoại trong nước: <strong>0918259981</strong>",
+        "phoneINT": "Số điện thoại quốc tế: <strong>0918910JQK</strong>",
+        "location": "Chọn địa điểm:",
+        "search": "Tìm"
+      },
+      "en": {
+        "title": "Online Reservation",
+        "description": "Book a table at our restaurants in <strong>Hanoi</strong>",
+        "findTable": "Find a suitable table",
+        "or": "OR",
+        "note": "For special needs, like large groups (15+ guests)... please contact Pizzarita Customer Service",
+        "phoneVN": "Domestic phone: <strong>0918259981</strong>",
+        "phoneINT": "International phone: <strong>0918910JQK</strong>",
+        "location": "Select location:",
+        "search": "Search"
+      }
+    };
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      currentLang = currentLang === 'vi' ? 'en' : 'vi';
+
+      document.getElementById('title').innerHTML = translations[currentLang].title;
+      document.getElementById('desc').innerHTML = translations[currentLang].description;
+      document.getElementById('findTable').innerHTML = translations[currentLang].findTable;
+      document.getElementById('or').innerHTML = translations[currentLang].or;
+      document.getElementById('note').innerHTML = translations[currentLang].note;
+      document.getElementById('phoneVN').innerHTML = translations[currentLang].phoneVN;
+      document.getElementById('phoneINT').innerHTML = translations[currentLang].phoneINT;
+      document.getElementById('location-label').innerHTML = translations[currentLang].location;
+      document.getElementById('search-btn').innerHTML = translations[currentLang].search;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Pizzarita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+	 body {
+  background-image: url('https://media.istockphoto.com/id/865407850/vector/seamless-pattern-with-pizza-herbs-mushrooms-olives-vector-illustration.jpg?s=612x612&w=0&k=20&c=Bf5vc_qcptKRS31sO2CmrqkPTm2xBZqr7xbMdT2EoLs=');
+  background-repeat: repeat;
+  background-size: 300px;
+  background-color: #fdf6ed; 
+}
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f2;
+      color: #1d2540;
+    }
+    .menu-container {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .carousel {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .menu-row {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+    .menu-item {
+      flex: 0 0 25%;
+      box-sizing: border-box;
+      padding: 0 16px;
+      background-color: #f9f7f2;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+    .menu-info {
+      padding: 16px;
+    }
+    .menu-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .menu-info p {
+      margin: 0;
+      color: #5a5a5a;
+      font-size: 16px;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 32px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .arrow-left {
+      left: 0;
+    }
+    .arrow-right {
+      right: 0;
+    }
+    footer {
+      background-color: #1d2540;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 16px;
+    }
+	  .section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.menu-row {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.menu-item {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  background-color: #f9f7f2;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.menu-info {
+  padding: 16px;
+}
+
+.menu-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.menu-info p {
+  margin: 0;
+  color: #5a5a5a;
+  font-size: 16px;
+}
+.menu-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; /* hoặc 6rem nếu bạn muốn to hơn nữa */
+  font-weight: 500;
+  color: #1a2342; /* màu xanh navy giống ảnh */
+  text-align: center;
+  margin: 60px 0 40px;
+}
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1 class="menu-title">Menu</h1>
+    <h2 class="section-title">Appetizers &amp; Salads</h2>
+
+    <div class="carousel">
+      <button class="arrow arrow-left" onclick="prevSlide()">‹</button>
+      <div class="menu-row" id="menuRow">
+        <!-- Menu Items -->
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/BYO_Assorted-Cheese_S-2-scaled.jpg" alt="">
+          <div class="menu-info">
+            <h3>Assorted House-made Cheese (S)</h3>
+            <p>109,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/BYO_Assorted-Cheese_L-2-scaled.jpg" alt="">
+          <div class="menu-info">
+            <h3>Assorted House-made Cheese (L)</h3>
+            <p>198,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/08/BYO_Cold-Cuts_S-2-scaled.jpg" alt="">
+          <div class="menu-info">
+            <h3>Cold Cuts and Cheese Platter (Small)</h3>
+            <p>172,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/08/BYO_Cold-Cuts_L-2-scaled.jpg" alt="">
+          <div class="menu-info">
+            <h3>Cold Cuts and Cheese Platter (Large)</h3>
+            <p>334,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/4PS_NOV_SOCIAL-6322.jpg" alt="">
+          <div class="menu-info">
+            <h3>Mozzarella Salmon Sushi</h3>
+            <p>92,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/Mango-Parma-Ham-Wrap-NEW.jpg" alt="">
+          <div class="menu-info">
+            <h3>Mango Parma Ham Wrap with Passion fruit sauce</h3>
+            <p>144,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/20000055_2.jpg" alt="">
+          <div class="menu-info">
+            <h3>Baked Mashed Potato and House-made Raclette Cheese</h3>
+            <p>78,000 vnd</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="https://pizza4ps.com/wp-content/uploads/2023/07/20000043_2.jpg" alt="">
+          <div class="menu-info">
+            <h3>Clam Chowder</h3>
+            <p>82,000 vnd</p>
+          </div>
+        </div>
+      </div>
+      <button class="arrow arrow-right" onclick="nextSlide()">›</button>
+    </div>
+	  <h2 class="section-title">Pizzas</h2>
+
+<div class="carousel">
+  <button class="arrow arrow-left" onclick="prevPizzaSlide()">‹</button>
+  <div class="menu-row" id="pizzaRow">
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2024/04/BYO_Garlic-Shrimp-Pizza-1.jpg" alt="Meat Lovers">
+      <div class="menu-info">
+        <h3>Meat Lovers Pizza</h3>
+        <p>280,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/PizzaBYO-1.png" alt="Four Cheese">
+      <div class="menu-info">
+        <h3>Four Cheese with Honey</h3>
+        <p>268,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/Extra-Parma-Ham-Margherita-4.jpg" alt="Burrata">
+      <div class="menu-info">
+        <h3>Burrata Parma Ham Pizza</h3>
+        <p>340,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/10000010_2.jpg" alt="Margherita">
+      <div class="menu-info">
+        <h3>Margherita</h3>
+        <p>190,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/10000006_2.jpg" alt="Teriyaki Chicken">
+      <div class="menu-info">
+        <h3>4-Cheese Pizza</h3>
+        <p>250,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/10000013_2.jpg" alt="Seafood">
+      <div class="menu-info">
+        <h3>Salmon Miso Cream Pizza</h3>
+        <p>310,000 vnd</p>
+      </div>
+    </div>
+  </div>
+  <button class="arrow arrow-right" onclick="nextPizzaSlide()">›</button>
+</div>
+	  <h2 class="section-title">Desserts</h2>
+
+<div class="carousel">
+  <button class="arrow arrow-left" onclick="prevDessertSlide()">‹</button>
+  <div class="menu-row" id="dessertRow">
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/30000304_2.jpg" alt="4 Cheese Dessert plate">
+      <div class="menu-info">
+        <h3>4 Cheese Dessert plate</h3>
+        <p>110,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/30000303_2.jpg" alt="Rich Vietnamese Cacao Terrine and Vanilla Ice cream">
+      <div class="menu-info">
+        <h3>Rich Vietnamese Cacao Terrine and House-made Vanilla Ice cream</h3>
+        <p>148,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/30000305_2.jpg" alt="House-made Greek Yogurt Panna Cotta">
+      <div class="menu-info">
+        <h3>House-made Greek Yogurt Panna Cotta with Tropical Fruit sauce</h3>
+        <p>98,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/30000001_2.jpg" alt="4P's Creamy Tiramisu">
+      <div class="menu-info">
+        <h3>4P's Creamy Tiramisu House-made Mascarpone</h3>
+        <p>92,000 vnd</p>
+      </div>
+    </div>
+  </div>
+  <button class="arrow arrow-right" onclick="nextDessertSlide()">›</button>
+</div>
+<h2 class="section-title">Drinks and Alcohol</h2>
+<div class="carousel">
+  <button class="arrow arrow-left" onclick="prevDrinkSlide()">‹</button>
+  <div class="menu-row" id="drinkRow">
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/Thiet-ke-chua-co-ten-8.png" alt="4P’s Dalat Whey Stout">
+      <div class="menu-info">
+        <h3>4P’s Dalat Whey Stout (5.5% ABV)</h3>
+        <p>85,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/40950006_2.jpg" alt="Natural Sake">
+      <div class="menu-info">
+        <h3>Natural Sake (Glass)</h3>
+        <p>120,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/1-APPLY-24-Red-SangriaGlass.jpg" alt="Red Sangria">
+      <div class="menu-info">
+        <h3>Red Sangria (Glass)</h3>
+        <p>99,000 vnd</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="https://pizza4ps.com/wp-content/uploads/2023/07/40100006_2-1.jpg" alt="White Sangria">
+      <div class="menu-info">
+        <h3>White Sangria (Glass)</h3>
+        <p>99,000 vnd</p>
+      </div>
+    </div>
+  </div>
+  <button class="arrow arrow-right" onclick="nextDrinkSlide()">›</button>
+</div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Pizzarita. All rights reserved.</p>
+  </footer>
+
+  <script>
+  // === Appetizers & Salads Carousel ===
+  const row = document.getElementById('menuRow');
+  let currentPage = 0;
+
+  function getItemsPerPage() {
+    const width = window.innerWidth;
+    if (width < 600) return 1;
+    if (width < 900) return 2;
+    if (width < 1200) return 3;
+    return 4;
+  }
+
+  function updateSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const itemWidth = row.querySelector('.menu-item').offsetWidth + 32;
+    const shift = currentPage * itemsPerPage * itemWidth;
+    row.style.transform = `translateX(-${shift}px)`;
+  }
+
+  function nextSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const totalItems = row.children.length;
+    const maxPage = Math.ceil(totalItems / itemsPerPage) - 1;
+    if (currentPage < maxPage) {
+      currentPage++;
+      updateSlide();
+    }
+  }
+
+  function prevSlide() {
+    if (currentPage > 0) {
+      currentPage--;
+      updateSlide();
+    }
+  }
+
+  // === Pizzas Carousel ===
+  const pizzaRow = document.getElementById('pizzaRow');
+  let pizzaPage = 0;
+
+  function updatePizzaSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const itemWidth = pizzaRow.querySelector('.menu-item').offsetWidth + 32;
+    const shift = pizzaPage * itemsPerPage * itemWidth;
+    pizzaRow.style.transform = `translateX(-${shift}px)`;
+  }
+
+  function nextPizzaSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const totalItems = pizzaRow.children.length;
+    const maxPage = Math.ceil(totalItems / itemsPerPage) - 1;
+    if (pizzaPage < maxPage) {
+      pizzaPage++;
+      updatePizzaSlide();
+    }
+  }
+
+  function prevPizzaSlide() {
+    if (pizzaPage > 0) {
+      pizzaPage--;
+      updatePizzaSlide();
+    }
+  }
+
+  // === Desserts Carousel ===
+  const dessertRow = document.getElementById('dessertRow');
+  let dessertPage = 0;
+
+  function updateDessertSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const itemWidth = dessertRow.querySelector('.menu-item').offsetWidth + 32;
+    const shift = dessertPage * itemsPerPage * itemWidth;
+    dessertRow.style.transform = `translateX(-${shift}px)`;
+  }
+
+  function nextDessertSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const totalItems = dessertRow.children.length;
+    const maxPage = Math.ceil(totalItems / itemsPerPage) - 1;
+    if (dessertPage < maxPage) {
+      dessertPage++;
+      updateDessertSlide();
+    }
+  }
+
+  function prevDessertSlide() {
+    if (dessertPage > 0) {
+      dessertPage--;
+      updateDessertSlide();
+    }
+  }
+
+  // === Drinks Carousel ===
+  const drinkRow = document.getElementById('drinkRow');
+  let drinkPage = 0;
+
+  function updateDrinkSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const itemWidth = drinkRow.querySelector('.menu-item').offsetWidth + 32;
+    const shift = drinkPage * itemsPerPage * itemWidth;
+    drinkRow.style.transform = `translateX(-${shift}px)`;
+  }
+
+  function nextDrinkSlide() {
+    const itemsPerPage = getItemsPerPage();
+    const totalItems = drinkRow.children.length;
+    const maxPage = Math.ceil(totalItems / itemsPerPage) - 1;
+    if (drinkPage < maxPage) {
+      drinkPage++;
+      updateDrinkSlide();
+    }
+  }
+
+  function prevDrinkSlide() {
+    if (drinkPage > 0) {
+      drinkPage--;
+      updateDrinkSlide();
+    }
+  }
+
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    currentPage = 0;
+    pizzaPage = 0;
+    dessertPage = 0;
+    drinkPage = 0;
+    updateSlide();
+    updatePizzaSlide();
+    updateDessertSlide();
+    updateDrinkSlide();
+  });
+
+  window.addEventListener('load', () => {
+    updateSlide();
+    updatePizzaSlide();
+    updateDessertSlide();
+    updateDrinkSlide();
+  });
+</script>
+</body>
+</html>

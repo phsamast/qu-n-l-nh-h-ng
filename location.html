@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzarita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      position: relative;
+    }
+
+    .map-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .info-card {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 340px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      padding: 16px;
+      z-index: 10;
+      font-size: 14px;
+    }
+
+    .location-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .info-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      margin: 8px 0 4px;
+    }
+
+    .rating {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .info-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin: 6px 0;
+      color: #333;
+    }
+
+    .info-detail i {
+      color: #666;
+      width: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      background-color: #f2f2f2;
+      color: #333;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .buttons button:hover {
+      background-color: #e0e0e0;
+    }
+
+    .info-link {
+      color: #1a73e8;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .info-card {
+        width: calc(100% - 40px);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        top: auto;
+      }
+    }
+	  .directions-button {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.3s;
+}
+.directions-button:hover {
+  background-color: #e0e0e0;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.info-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+  </style>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29796.37851292754!2d105.81449209742841!3d21.01077571139117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab72f83894e1%3A0x4737dc743d51a9d4!2zUGl6emEgNFDigJlzIFRyw6BuZyBUaeG7gW4!5e0!3m2!1svi!2s!4v1747673759708!5m2!1svi!2s" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="info-card">
+    <img src="https://pizza4ps.com/wp-content/uploads/2023/07/Anh-man-hinh-2023-07-13-luc-10.27.36.png" alt="Pizza" class="location-img" />
+    <h2>Pizzarita Tràng Tiền</h2>
+    <div class="rating">⭐ 4.9 (17.121) • Nhà hàng pizza 🍕</div>
+    <div class="info-detail"><i class="fas fa-map-marker-alt"></i> 43 Tràng Tiền, Hoàn Kiếm, Hà Nội</div>
+    <div class="info-detail"><i class="fas fa-clock"></i> Mở cửa: 10:30 – 22:00</div>
+    <div class="info-detail"><i class="fas fa-globe"></i> <a href="homepage.html" class="info-link">Trang chủ</a></div>
+
+    <div class="buttons">
+  <a href="reservation.html" class="directions-button">
+  <i class="fas fa-calendar-check"></i> Đặt bàn
+</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Pizza+4P's+Tràng+Tiền,+43+Tràng+Tiền,+Hoàn+Kiếm,+Hà+Nội" 
+     target="_blank" 
+     class="directions-button">
+    <i class="fas fa-directions"></i> Đường đi
+  </a>
+</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Pizzarita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://pizza4ps.com/wp-content/uploads/2023/07/4PS-COBI-17FEB-2-scaled.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(39, 47, 82, 0.95);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left {
+      font-size: 1.3rem;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .header-right a {
+      color: #f15a29;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 60px auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2e3142;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: white;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #2e3142;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #1f2233;
+    }
+
+    .checkbox-area {
+      display: flex;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .checkbox-area input {
+      margin-right: 0.5rem;
+      margin-top: 3px;
+    }
+
+    .checkbox-area label a {
+      color: #2e3142;
+      text-decoration: underline;
+    }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .extra-links a {
+      color: #2e3142;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-left">PIZZARITA</div>
+  <div class="header-right">
+    <span><i class="fa-regular fa-clock"></i> Hotline: <a href="tel:0918259981">0918259981</a></span>
+  </div>
+</header>
+<div class="login-container">
+  <h2>Login to your account</h2>
+  <form>
+    <input type="email" placeholder="* Email address" required>
+    <input type="password" placeholder="* Password" required>
+    <button class="login-btn" type="submit">Login</button>
+    <div class="checkbox-area">
+      <input type="checkbox" required>
+      <label>I have read and agreed to the Pizza 4P’s <a href="#">Privacy Policy</a>, <a href="#">Terms and Conditions</a>.</label>
+    </div>
+    <div class="extra-links">
+      <p>Did not have an account? <a href="#">Create an account</a></p>
+    </div>
+  </form>
+</div>
+</body>
+</html>
