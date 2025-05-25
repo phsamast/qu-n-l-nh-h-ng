@@ -151,9 +151,9 @@
 }
 .menu-title {
   font-family: 'Playfair Display', serif;
-  font-size: 5rem; /* hoặc 6rem nếu bạn muốn to hơn nữa */
+  font-size: 5rem;
   font-weight: 500;
-  color: #1a2342; /* màu xanh navy giống ảnh */
+  color: #1a2342;
   text-align: center;
   margin: 60px 0 40px;
 }
@@ -354,7 +354,6 @@
   </footer>
 
   <script>
-  // === Appetizers & Salads Carousel ===
   const row = document.getElementById('menuRow');
   let currentPage = 0;
 
@@ -389,8 +388,6 @@
       updateSlide();
     }
   }
-
-  // === Pizzas Carousel ===
   const pizzaRow = document.getElementById('pizzaRow');
   let pizzaPage = 0;
 
@@ -417,8 +414,6 @@
       updatePizzaSlide();
     }
   }
-
-  // === Desserts Carousel ===
   const dessertRow = document.getElementById('dessertRow');
   let dessertPage = 0;
 
@@ -445,8 +440,6 @@
       updateDessertSlide();
     }
   }
-
-  // === Drinks Carousel ===
   const drinkRow = document.getElementById('drinkRow');
   let drinkPage = 0;
 
@@ -474,7 +467,7 @@
     }
   }
 
-  // Recalculate on resize
+
   window.addEventListener('resize', () => {
     currentPage = 0;
     pizzaPage = 0;

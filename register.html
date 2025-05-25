@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Pizzarita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://pizza4ps.com/wp-content/uploads/2023/07/4PS-COBI-17FEB-2-scaled.jpg') no-repeat center center/cover;
+    }
+
+    .header {
+      background-color: #1e294f;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .hotline a {
+      color: #ff5a3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .language {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main */
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 70px);
+      padding: 20px;
+    }
+
+    .form-card {
+      background-color: rgba(248, 245, 239, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+
+    .form-card h2 {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 30px;
+      color: #1e294f;
+    }
+
+    form input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    form button {
+      width: 100%;
+      background-color: #1e294f;
+      color: white;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #14203a;
+    }
+
+    .terms {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #333;
+      text-align: left;
+    }
+
+    .terms input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .terms a {
+      font-weight: 600;
+      color: #1e294f;
+      text-decoration: none;
+    }
+
+    .terms a:hover {
+      text-decoration: underline;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      font-weight: 600;
+      color: #1e294f;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">PIZZARITA</div>
+    <div class="header-right">
+      <div class="hotline">
+        <i class="fas fa-phone-alt"></i> Hotline: <a href="tel:0918259981">0918259981</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="form-card">
+      <h2>Create your account</h2>
+      <form>
+        <input type="email" placeholder="* Email address" required />
+        <input type="password" placeholder="* Password" required />
+        <input type="password" placeholder="* Confirm password" required />
+        <button type="submit">Register</button>
+
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

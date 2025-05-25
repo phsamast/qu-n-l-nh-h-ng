@@ -293,6 +293,95 @@
 .left-text a:hover {
   color: white;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  min-width: 250px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+.login-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form button {
+  background-color: white;
+  color: #1d2540;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #ddd;
+}
+
+.login-form .links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.login-form .links a {
+  color: white;
+  text-decoration: none;
+}
+
+.login-form .links a:hover {
+  text-decoration: underline;
+}
 
   </style>
 </head>
@@ -302,20 +391,24 @@
     <nav>
       <div class="logo">PIZZARITA <span style="font-size: 14px; font-weight: normal;">VIETNAM</span></div>
       <div class="menu">
-        <a href="reservation.html">RESERVATION</a>
-        <a href="menu.html">MENU</a>
-        <a href="#">DELIVERY</a>
-        <a href="#">HISTORY</a>
-        <a href="#">☰</a>
-      </div>
+  <a href="reservation.html">RESERVATION</a>
+  <a href="menu.html">MENU</a>
+  <a href="#">DELIVERY</a>
+  <div class="dropdown">
+    <a href="#" class="dropdown-toggle">☰</a>
+    <div class="dropdown-menu">
+      <a href="login.html">Log in</a>
+    </div>
+  </div>
+</div>
     </nav>
 
-    <div class="left-text">
-  <a class="active" href="https://pizza4ps.com/vietnam" target="_blank">Vietnam</a>
-  <a href="location.html" target="_blank">Store location</a>
-  <a href="reservation.html" target="_blank">Reservation</a>
-  <a href="menu.html" target="_blank">Menu</a>
-  <a href="https://pizza4ps.com/about-us" target="_blank">About us</a>
+<div class="left-text">
+  <a class="active" href="#">Vietnam</a>
+  <a href="location.html">Store location</a>
+  <a href="reservation.html">Reservation</a>
+  <a href="menu.html">Menu</a>
+  <a href="#">About us</a>
 </div>
   </div>
 
